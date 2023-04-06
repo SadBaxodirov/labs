@@ -11,12 +11,15 @@ int main()
     float x2 = 0;
     
     cin>>a>>b>>c;
-    x1 = (-b+sqrt(b*b-4*a*c))/(2*a);
-    x2 = (-b-sqrt(b*b-4*a*c))/(2*a);
-    if (x1==x2){
-        cout<<"x1=x2="<<x1;
-    } else {
+    if (sqrt(b*b-4*a*c)>0){
+        x1 = (-b+sqrt(b*b-4*a*c))/(2*a);
+        x2 = (-b-sqrt(b*b-4*a*c))/(2*a);
         cout<<"x1="<<x1<<" and x2="<<x2;
+    } else if (sqrt(b*b-4*a*c)==0){
+        x1 = (-b)/(2*a);
+        cout<<"x1=x2="<<x1;
+    } else{
+        cout<<"No solution";
     }
     return 0;
 }
