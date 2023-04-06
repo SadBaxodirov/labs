@@ -1,0 +1,28 @@
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+    int x=0;
+    cout<<"Please enter an integer number: ";
+    cin>>x;
+    if (x>=0){
+        cout<<"The number is positive and ";
+        if (x%2==0){
+            cout<<"even";
+        } else{
+            cout<<"odd";
+        }
+        
+    } else {
+        cout<<"The number is negative and ";
+        if (x%2==0){
+            cout<<"even";
+        } else{
+            cout<<"odd";
+        }
+    }
+
+    return 0;
+}
