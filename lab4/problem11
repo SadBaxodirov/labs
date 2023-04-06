@@ -1,1 +1,45 @@
+#include <iostream>
+#include <string>
+using namespace std;
+string day_check(int number){
+    string result;
+    switch (number){
+        case 1:
+            result = "Monday";
+            break;
+        case 2:
+            result = "Tuesday";
+            break;
+        case 3:
+            result = "Wednesday";
+            break;
+        case 4:
+            result = "Thursday";
+            break;
+        case 5:
+            result = "Friday";
+            break;
+        case 6:
+            result = "Saturday";
+            break;
+        case 0:
+            result = "Sunday";
+            break;
+    }
+    return result;
+}
+int main()
+{
+    int today = 0;
+    int time_elapsed = 0;
+    int new_day = 0;
+    cout<<"Enter today's day: ";
+    cin>>today;
+    cout<<"Enter the number of days elapsed since today: ";
+    cin>>time_elapsed;
+    new_day = (today+time_elapsed)%7;
+    
+    cout<<"Today is "<<day_check(today)<<" and the future day is "<<day_check(new_day);
 
+    return 0;
+}
