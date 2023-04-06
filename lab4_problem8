@@ -1,0 +1,16 @@
+#include <iostream>
+#include <string>
+using namespace std;
+
+int main()
+{
+    string name;
+    cin>>name;
+    if (name=="Johnson"||name=="Smith"||name=="Anderson"||name=="Bennet"||name=="Jackson"){
+        cout<<"You have access";
+    } else {
+        cout<<"You do not have access";
+    }
+    
+    return 0;
+}
