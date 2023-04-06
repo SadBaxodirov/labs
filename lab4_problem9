@@ -1,0 +1,37 @@
+#include <iostream>
+#include <string>
+using namespace std;
+
+int main()
+{
+    string hair;
+    string eyes;
+    string hand;
+    cout<<"What hair do you have(light or dark)? ";
+    cin>>hair;
+    cout<<"What is your eye color? ";
+    cin>>eyes;
+    cout<<"Are you left-handed or right-handed? ";
+    cin>>hand;
+    
+    if (hair == "light"){
+        cout<<"Welcome George";
+    } else if (hair=="dark") {
+        if (eyes=="blue"){
+            if (hand == "right-handed"){
+                cout<<"Welcome Leonard";
+            } else{
+                cout<<"Welcome Jack or Joanne";
+            }
+        } else{
+            if (hand == "right-handed"){
+                cout<<"Welcome Michael";
+            } else{
+                cout<<"Welcome Pamela";
+            }
+        }
+    } else{
+        cout<<"No worker with such characteristics";
+    }
+    
+}
