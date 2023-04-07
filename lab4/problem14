@@ -1,0 +1,23 @@
+#include <iostream>
+#include <string>
+using namespace std;
+
+int main()
+{
+    string num;
+    long int sum = 0;
+    int isbn = 0;
+    char x = 'X';
+    cin>>num;
+    for (int i=0;i<num.size();i++){
+        sum += (int(num[i])-int('0'))*(i+1);
+    }
+    isbn = sum%11;
+    if (isbn==10){
+        cout<<num+x;
+    } else {
+        cout<<num;
+        cout<<isbn;
+    }
+    return 0;
+}
