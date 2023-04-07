@@ -8,11 +8,13 @@ int main()
     long int sum = 0;
     int isbn = 0;
     char x = 'X';
+    cout<<"Enter the first 9 digits of an ISBN as integer: ";
     cin>>num;
     for (int i=0;i<num.size();i++){
         sum += (int(num[i])-int('0'))*(i+1);
     }
     isbn = sum%11;
+    cout<<"The ISBN-10 number is ";
     if (isbn==10){
         cout<<num+x;
     } else {
