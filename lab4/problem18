@@ -1,0 +1,18 @@
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+    float x = 0;
+    float y = 0;
+    cout<<"Enter a point with two coordinates: ";
+    cin>>x>>y;
+    if ((x*x+y*y)<=100){
+        cout<<"The point ("<<x<<", "<<y<<") is in the circle";
+    } else{
+        cout<<"The point ("<<x<<", "<<y<<") is not in the circle";
+    }
+    
+    return 0;
+}
