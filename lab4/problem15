@@ -1,0 +1,21 @@
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+    int num = 0;
+    int digit1 = 0;
+    int digit3 = 0;
+    cout<<"Enter a three-digit integer: ";
+    cin>>num;
+    digit1 = num/100;
+    digit3 = num%10;
+    if (digit1==digit3){
+        cout<<num<<" is a palindrome";
+    } else {
+        cout<<num<<" is not a palindrome";
+    }
+    
+    return 0;
+}
