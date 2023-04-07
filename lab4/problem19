@@ -1,0 +1,18 @@
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+    float x = 0;
+    float y = 0;
+    cout<<"Enter a point's x- and y-coordinates: ";
+    cin>>x>>y;
+    if ((x>0)&&(y>0)&&(y<(-0.5*x+100))){//y<-0.5x+100 is the function of the hypotenuse
+        cout<<"The point is in the triangle";
+    } else{
+        cout<<"The point is not in the triangle";
+    }
+    
+    return 0;
+}
