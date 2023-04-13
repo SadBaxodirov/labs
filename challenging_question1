@@ -1,0 +1,16 @@
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+    int i=8;
+    if (i=(i+2&&i==16)){//if (i+=2&&i==16) the original
+        cout<<"inside if"<<endl;
+        cout<<i<<endl;
+    }
+    
+    cout<<i<<endl;
+
+    return 0;
+}
