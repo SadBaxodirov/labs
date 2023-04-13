@@ -1,0 +1,18 @@
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+    int num=1;
+    int max = num;
+    while (num!=0){
+        cin>>num;
+        //max = num;
+        if (max<num){
+            max = num;
+        }
+    }
+    cout<<"Max is "<<max;
+    return 0;
+}
