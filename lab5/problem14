@@ -1,0 +1,28 @@
+#include <iostream>
+
+using namespace std;
+int perfectNum(int number){
+    int sum = 0;
+    int result = 0;
+    for (int num=number;num<10001;num++){
+        for (int a=1;a<num;a++){
+            if (num%a==0){
+                sum += a;
+                //cout<<a<<endl;
+            }
+        }
+        if (sum==num){
+            result = num;
+            break;
+        }
+        sum = 0;
+    }
+    return result;
+}
+int main()
+{
+    cout<<"The first answer is "<<perfectNum(29)<<endl;
+    cout<<"The second answer is "<<perfectNum(perfectNum(29)+1);
+    
+    return 0;
+}
