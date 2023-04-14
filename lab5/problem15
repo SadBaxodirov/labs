@@ -1,0 +1,21 @@
+#include <iostream>
+
+using namespace std;
+int main()
+{
+    int depth = 0;
+    cin>>depth;
+    if (depth==0){
+        cout<<"The depth is 0";
+        return 0;
+    } else{
+        for (int i=1;i<=depth;i++){
+            for(int a=1;a<=i;a++){
+                cout<<i;
+            }
+            cout<<"\n";
+        }
+    }
+    
+    return 0;
+}
