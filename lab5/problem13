@@ -1,0 +1,17 @@
+#include <iostream>
+#include <string>
+using namespace std;
+
+int main()
+{
+    string num;
+    int number = 0;
+    int result = 0;
+    cin>>num;
+    for (int i=0;i<num.length();i++){
+        number = num[i]-'0';
+        result += number;
+    }
+    cout<<"The sum of digits is "<<result;
+    return 0;
+}
