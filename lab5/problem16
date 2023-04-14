@@ -1,0 +1,32 @@
+#include <iostream>
+
+using namespace std;
+int main()
+{
+    int pos = 0;
+    int neg = 0;
+    float kolvo = 0;
+    float sum = 0;
+    float avg = 0;
+    int num = 1;
+    while (num!=0){
+        cin>>num;
+        kolvo+=1.0;
+        if (num>0){
+            pos++;
+        } else if(num<0){
+            neg++;
+        } 
+        sum += num;
+    }
+    if (kolvo==1){
+        cout<<"No numbers are entered except 0";
+        return 0;
+    }
+    avg = sum/(kolvo-1);
+    cout<<"The number of positives is "<<pos<<endl;
+    cout<<"The number of negatives is "<<neg<<endl;
+    cout<<"The total is "<<sum<<endl;
+    cout<<"The average is "<<avg<<endl;
+    return 0;
+}
