@@ -1,0 +1,20 @@
+#include <iostream>
+using namespace std;
+
+long int Factorial(int number){
+    long int result = 1;
+    if (number<1){
+        return 404;
+    } else{
+        for (int i=1;i<=number;i++){
+            result = result*i;
+        }
+    }
+    return result;
+}
+int main(){
+    int num = 0;
+    cout<<"Please enter the number: ";
+    cin>>num;
+    cout<<"The factorial of "<<num<<" is "<<Factorial(num)<<endl;
+}
