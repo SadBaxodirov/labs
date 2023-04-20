@@ -1,0 +1,16 @@
+#include <iostream>
+
+using namespace std;
+
+float get_sum(float, float);
+int main(){
+    float num1=0;
+    float num2=0;
+    cout<<"Please enter two numbers: ";
+    cin>>num1>>num2;
+    cout<<"The sum is "<<get_sum(num1,num2)<<endl;
+    return 0;
+}
+float get_sum(float num1, float num2){
+    return (num1+num2);
+}
