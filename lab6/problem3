@@ -1,0 +1,14 @@
+#include <iostream>
+#include <cmath>
+using namespace std;
+
+void circle_calculator(float radius){
+    cout<<"The circumference is "<<2*M_PI*radius<<endl;
+    cout<<"The area is "<<M_PI*radius*radius<<endl;
+}
+int main(){
+    float radius = 0;
+    cout<<"Please enter the radius: ";
+    cin>>radius;
+    circle_calculator(radius);
+}
