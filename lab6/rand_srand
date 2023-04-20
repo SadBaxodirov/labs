@@ -1,0 +1,12 @@
+#include <cstdlib>
+#include <ctime>
+#include <iostream>
+using namespace std;
+
+int main() {
+    srand(time(0));
+    int randomNumber = rand();
+    cout<<randomNumber<<endl;//different big random every time
+    cout << randomNumber%10 << endl;//different random number from 0 to 9
+    cout << 1+randomNumber%10 << endl;//different random number from 1 to 10
+}
