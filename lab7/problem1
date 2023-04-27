@@ -1,0 +1,20 @@
+#include <iostream>
+#include <cmath>
+using namespace std;
+int main()
+{ 
+    float temp = 0;
+    float speed = 0;
+    float result = 0;
+    cout<<"Enter the temperature in Fahrenheit between -58°F and 41°F: ";
+    cin>>temp;
+    cout<<"Enter the wind speed (>= 2) in miles per hour: ";
+    cin>>speed;
+    if ((temp>=-58&&temp<=41)&&speed>=2){
+        result = 35.74 + 0.6215*temp-(35.75*pow(speed, 0.16))+(0.4275*temp*pow(speed, 0.16));
+        cout<<"The wind chill index is "<<result<<endl;
+    } else{
+        cout<<"Enter the correct values";
+    }
+    return 0;
+}
