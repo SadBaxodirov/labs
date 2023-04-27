@@ -1,0 +1,32 @@
+#include <iostream>
+
+using namespace std;
+int encrypt(int num){
+    int d1=num%10;
+    d1=(d1+7)%10;
+    int d2=(num/10)%10;
+    d2=(d2+7)%10;
+    int d3=(num/100)%10;
+    d3=(d3+7)%10;
+    int d4=(num/1000)%10;
+    d4=(d4+7)%10;
+    int temp = 0;
+    temp = d1;
+    d1=d3;
+    d3=temp;
+    temp=d2;
+    d2=d4;
+    d4=temp;
+    int result[4] = [d4,d3,d2,d1];
+    return ;
+}
+int decrypt(int num){
+    return 0;
+}
+int main()
+{ 
+    int n = 0;
+    cin>>n;
+    cout<<encrypt(n);
+    return 0;
+}
