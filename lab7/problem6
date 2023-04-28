@@ -1,0 +1,33 @@
+#include <iostream>
+using namespace std;
+
+int main(){
+    int product = 10;
+    int quantity;
+    float total = 0;
+    float cost = 0;
+    cout<<"To get out of the loop enter product number 0 or quantity less than 0"<<endl;
+    while ((product!=0)&&(quantity>=0)){
+        cin>>product>>quantity;
+        switch (product){
+            case 1:
+                cost = 2.98;
+                break;
+            case 2:
+                cost = 4.5;
+                break;
+            case 3:
+                cost = 9.98;
+                break;
+            case 4:
+                cost = 4.49;
+                break;
+            case 5:
+                cost = 6.87;
+                break;
+        }
+        total += (cost*quantity);
+    }
+    cout<<"The total retail is "<<total<<endl;
+    return 0;
+}
