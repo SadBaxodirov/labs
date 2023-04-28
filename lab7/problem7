@@ -1,0 +1,54 @@
+#include <iostream>
+using namespace std;
+
+int day_finder(int year, int month, int day){
+    if (month==1){
+        month = 13;
+        year--;
+    } else if (month==2){
+        month=14;
+        year--;
+    }
+    int h = (day+(26*(month+1)/10)+(year%100)+((year%100)/4)+(year/400)+(year/20))%7;
+    return h;
+}
+
+int main(){
+    int year = 0;
+    int month = 0;
+    int day = 0;
+    cout<<"Enter year(e.g., 2012): ";
+    cin>>year;
+    cout<<"Enter month 1-12: ";
+    cin>>month;
+    cout<<"Enter the day of the month 1-31: ";
+    cin>>day;
+    switch (day_finder(year, month, day)){
+        case 0:
+            cout<<"Day of the week is Saturday"<<endl;
+            break;
+        case 1:
+            cout<<"Day of the week is Sunday"<<endl;
+            break;
+        case 2:
+            cout<<"Day of the week is Monday"<<endl;
+            break;
+        case 3:
+            cout<<"Day of the week is Tuesday"<<endl;
+            break;
+        case 4:
+            cout<<"Day of the week is Wednesday"<<endl;
+            break;
+        case 5:
+            cout<<"Day of the week is Thursday"<<endl;
+            break;
+        case 6:
+            cout<<"Day of the week is Friday"<<endl;
+            break;
+        default:
+            cout<<"Error, please check your input values";
+            break;
+    }
+   
+    return 0;
+}
