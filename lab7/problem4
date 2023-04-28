@@ -1,7 +1,7 @@
 #include <iostream>
 
 using namespace std;
-int encrypt(int num){
+void encrypt(int num){
     int d1=num%10;
     d1=(d1+7)%10;
     int d2=(num/10)%10;
@@ -17,16 +17,34 @@ int encrypt(int num){
     temp=d2;
     d2=d4;
     d4=temp;
-    int result[4] = [d4,d3,d2,d1];
-    return ;
+    cout<<d4<<d3<<d2<<d1<<endl;
+    
 }
-int decrypt(int num){
-    return 0;
+void decrypt(int num){
+    int d1=num%10;
+    int d2=(num/10)%10;
+    int d3=(num/100)%10;
+    int d4=(num/1000)%10;
+    int temp = 0;
+    temp = d1;
+    d1=d3;
+    d3=temp;
+    temp=d2;
+    d2=d4;
+    d4=temp;
+    d1 = (d1+3)%10;
+    d2 = (d2+3)%10;
+    d3 = (d3+3)%10;
+    d4 = (d4+3)%10;
+    cout<<d4<<d3<<d2<<d1<<endl;
 }
 int main()
 { 
     int n = 0;
+    int cipher = 0;
     cin>>n;
-    cout<<encrypt(n);
+    encrypt(n);
+    cin>>cipher;
+    decrypt(cipher);
     return 0;
 }
